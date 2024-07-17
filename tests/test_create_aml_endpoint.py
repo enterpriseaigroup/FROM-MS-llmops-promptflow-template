@@ -59,7 +59,6 @@ def test_create_provision_endpoint_when_not_exists():
         assert created_endpoint.description == endpoint_description
         assert created_endpoint.auth_mode == "key"
 
-
 def test_create_provision_endpoint_when_exists():
     """Test create_provision_endpoint."""
     env_name = "dev"
@@ -86,6 +85,6 @@ def test_create_provision_endpoint_when_exists():
         )
 
         # Endpoint should not be created if it already exists as it would
-        # set the traffic to zero for existing deployments and there are
+        # set the traffic to zero for existing deployments and there are 
         # no properties we need to update on the endpoint
         assert create_endpoint_calls.call_count == 0
